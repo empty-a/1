@@ -1,33 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <style>
-    body {
-      background-color: #FDF5E6;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+    color: #263238;
+    font-size: 10.2pt;
+    line-height: 1.5;
+  }
+  .page { width: 210mm; min-height: 297mm; display: flex; flex-direction: column; }
 
-    h1 {
-      color: #FF6347;
-      text-align: center;
-    }
+  /* ===== 顶部横幅 ===== */
+  .header {
+    background: linear-gradient(120deg, #16466b 0%, #1f6f8b 60%, #2a9d8f 100%);
+    color: #fff;
+    padding: 16mm 14mm 9mm 14mm;
+  }
+  .header .name { font-size: 27pt; font-weight: 700; letter-spacing: 6px; }
+  .header .sub { margin-top: 3mm; font-size: 11pt; color: #e6f2f4; letter-spacing: 1px; }
+  .header .contact { margin-top: 4mm; font-size: 9.5pt; color: #dceef1; }
+  .header .contact span { margin-right: 6mm; }
+  .objective {
+    background: #eaf4f3;
+    border-left: 5mm solid #2a9d8f;
+    padding: 4mm 14mm;
+    font-size: 10pt;
+    color: #16466b;
+  }
+  .objective b { color: #16466b; }
 
-    p {
-      color: #800080;
-      font-size: 18px;
-      text-align: center;
-    }
+  /* ===== 主体双栏 ===== */
+  .body { display: flex; flex: 1; }
+  .sidebar {
+    width: 35%;
+    background: linear-gradient(160deg, #1d4e6e 0%, #23627f 100%);
+    color: #eef6f7;
+    padding: 7mm 6mm 10mm 7mm;
+  }
+  .main { width: 65%; padding: 7mm 8mm 10mm 8mm; }
 
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
+  .side-title, .main-title {
+    font-size: 12pt; font-weight: 700; letter-spacing: 2px;
+    padding-bottom: 1.5mm; margin-bottom: 3.5mm;
+  }
+  .side-title { color: #fff; border-bottom: 1.2px solid rgba(255,255,255,.35); }
+  .main-title { color: #16466b; border-bottom: 1.6px solid #2a9d8f; }
+  .side-block { margin-bottom: 7mm; }
+
+  .skill-item { margin-bottom: 2.6mm; font-size: 9.6pt; }
+  .skill-item::before { content: "▸ "; color: #7fd1c4; }
+
+  .side-block p { font-size: 9.6pt; margin-bottom: 2.6mm; }
+
+  .award-item {
+    background: rgba(255,255,255,.1);
+    border-left: 3px solid #7fd1c4;
+    padding: 2.5mm 3mm; margin-bottom: 3mm; font-size: 9.3pt; border-radius: 0 3px 3px 0;
+  }
+
+  /* ===== 右栏内容 ===== */
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5mm; }
+  .edu-head .school { font-weight: 700; font-size: 10.6pt; color: #16466b; }
+  .edu-head .date { font-size: 9pt; color: #6b7c85; }
+  .edu-major { font-size: 9.8pt; margin-bottom: 2.5mm; color: #37474f; }
+
+  ul.bullets { margin: 0 0 4mm 4mm; }
+  ul.bullets li { margin-bottom: 2mm; font-size: 9.7pt; }
+
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5mm; }
+  .entry-head .role { font-weight: 700; font-size: 10.2pt; color: #16466b; }
+  .entry-head .tag { font-size: 8.8pt; color: #2a9d8f; font-weight: 600; }
+
+  .section { margin-bottom: 6mm; }
+  .eval {
+    background: #f2f8f7;
+    border: 1px dashed #2a9d8f;
+    border-radius: 4px;
+    padding: 4mm;
+    font-size: 9.7pt;
+    color: #37474f;
+  }
+</style>
 </head>
-
 <body>
-  <h1>祝林辰生日快乐！</h1>
-  <img src="12.png"/ alt="" width="300" height="300">
-  <p>https://blog.csdn.net/SEAL0107/article/details/138735830
-</p>
-</body>
+<div class="page">
 
+  <div class="header">
+    <div class="name">黄 伟</div>
+    <div class="sub">广西贺州 · 电气工程及其自动化 · 2028 届</div>
+    <div class="contact">
+      <span>📞 13457079112</span>
+      <span>✉ 2692234960@qq.com</span>
+    </div>
+  </div>
+  <div class="objective">
+    <b>求职意向：</b>电气工程师（储能电气设计 / 高端装备电气设计）｜本科｜2028 年 6 月毕业
+  </div>
+
+  <div class="body">
+    <!-- 左侧栏 -->
+    <div class="sidebar">
+      <div class="side-block">
+        <div class="side-title">技能和证书</div>
+        <div class="skill-item">AutoCAD 熟练，EPLAN 在学</div>
+        <div class="skill-item">低压电工作业证（备考中）</div>
+        <div class="skill-item">能读英文器件手册</div>
+        <div class="skill-item">MATLAB / Simulink、Multisim 基础</div>
+        <div class="skill-item">Word / Excel / PPT 熟练</div>
+        <div class="skill-item">GB 50054 低压配电选型计算</div>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">学生工作</div>
+        <p>二级学院生活权益部干事</p>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">获奖经历</div>
+        <div class="award-item">国际青年人工智能大赛智慧工厂任务挑战赛 · 二等奖</div>
+        <div class="award-item">2026 年 iCAN 大学生创新创业大赛"菲尼克斯杯"智能制造多模态控制挑战赛选拔赛 · 三等奖</div>
+      </div>
+    </div>
+
+    <!-- 右侧主栏 -->
+    <div class="main">
+      <div class="section">
+        <div class="main-title">教育信息</div>
+        <div class="edu-head">
+          <span class="school">贺州学院</span>
+          <span class="date">2024.09 - 2028.06　本科</span>
+        </div>
+        <div class="edu-major">电气工程及其自动化 · 建筑与电气工程学院</div>
+        <ul class="bullets">
+          <li><b>主修课程：</b>电路、模拟电子技术、数字电子技术、电力电子技术、电机学、电力系统分析、自动控制原理、工厂供电、电气接线原理及运行</li>
+          <li><b>电气接线原理及运行实验设计：</b>独立完成断路器控制、电压测控、中央事故及预告信号、同步电压测量四个专题，形成 4 套二次原理图与仿真报告</li>
+          <li><b>两次电子课程设计均独立完成：</b>直流稳压电源（整流、滤波、稳压、保护）、数字显示逻辑电路（计数、译码、驱动、显示）</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="main-title">项目与实训</div>
+        <div class="entry-head">
+          <span class="role">电气接线实验设计</span>
+          <span class="tag">独立完成</span>
+        </div>
+        <ul class="bullets">
+          <li>完成断路器控制信号回路、电压测控回路的原理图设计与仿真验证</li>
+          <li>核对防跳、闭锁与信号复归逻辑，图纸可直接用于课堂讲解</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="main-title">竞赛经历</div>
+        <div class="entry-head">
+          <span class="role">睿抗机器人开发者大赛</span>
+          <span class="tag">视觉 / 算法 · 广西赛区三等奖</span>
+        </div>
+        <ul class="bullets">
+          <li>负责视觉识别与目标定位模块，配合电控联调</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="main-title">自我评价</div>
+        <div class="eval">
+          电气工程及其自动化本科生，做过四套二次回路图纸和两个电子课程设计，能看懂图、也能动手搭。正在补 EPLAN 与 PLC，求职方向是储能或装备制造的电气工程师。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
+
